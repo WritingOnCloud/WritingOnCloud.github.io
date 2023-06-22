@@ -13,5 +13,12 @@
 ### CNCF Projects
 
 ## HandsOn Projects
-1. a
-2. b
+* Containarising
+   * a
+* Infra as Code
+   * a
+* Deploying Microservices
+* CICD E2E
+* DevSecOps E2E
+* Clustering
+
