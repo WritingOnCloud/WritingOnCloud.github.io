@@ -1,12 +1,16 @@
 ## Tech blog from a cloud engineer
 
-### Containers
+### Containerization
 1. a
 2. b
 
 ### Kubernetes
 
 ### Infrastructure as Code
+1. Provisioning
+   - a 
+2. Configuration Managemeent
+   - a
 
 ### Networking
 
@@ -14,9 +18,9 @@
 
 ## HandsOn Projects
 * Containarising
-   * a
+   - a
 * Infra as Code
-   * a
+   - a
 * Deploying Microservices
 * CICD E2E
 * DevSecOps E2E
