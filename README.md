@@ -29,8 +29,9 @@
 * Infra as Code
    - a
 * Deploying Microservices
-* CICD E2E
-  - Create a CICD pipeline for Flask microservice 
+* Piplelines
+  - A CICD pipeline for Flask microservice
+  - A data pipleine for weather data
 * DevSecOps E2E
 * Clustering
 
