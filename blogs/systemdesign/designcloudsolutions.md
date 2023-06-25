@@ -1,11 +1,19 @@
 # High Level Steps to Design Cloud Solutions
     
 ## Define Requirements: 
-Understand the specific requirements of the solution, including availability, security, and scalability needs. Identify the desired uptime, security measures, and anticipated growth patterns.
+Understand the specific requirements of the solution, including availability, security, and scalability needs. Identify the desired uptime, security measures, and anticipated growth patterns.  
+   *eg:  
+    - High availability: The platform should have a target uptime of 99.99% to ensure minimal downtime for customers.  
+    - Security: Implement strong security measures to protect customer data, including encryption, secure access controls, and regular security audits.  
+    - Scalability: Design the platform to handle increased traffic during peak seasons, such as holidays or promotional events.*  
 
 ## Architectural Design: 
-Develop a robust architectural design that addresses high availability, security, and scalability. Consider using distributed systems, load balancers, redundant components, and fault-tolerant design patterns like active-active or active-passive setups.
-
+Develop a robust architectural design that addresses high availability, security, and scalability. Consider using distributed systems, load balancers, redundant components, and fault-tolerant design patterns like active-active or active-passive setups.  
+    *eg:  
+    - Utilize a microservices architecture to enable modular development and scalability.  
+    - Deploy the application across multiple availability zones in a cloud provider's region for redundancy and high availability.  
+    - Use load balancers to distribute traffic among multiple instances of each microservice.*  
+    
 ## Redundancy and Failover: 
 Implement redundancy mechanisms to ensure high availability. This may involve deploying resources across multiple availability zones or regions, using load balancers for traffic distribution, and configuring failover mechanisms to handle component or infrastructure failures.
 
