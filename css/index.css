@@ -23,12 +23,12 @@ header {
 
 h1 {
     font-size: 28px;
+    display: flex;
     margin-bottom: 10px;
 }
 
 nav ul {
     list-style: none;
-    display: flex;
     margin-left: auto;
     padding: 10px;
 }
