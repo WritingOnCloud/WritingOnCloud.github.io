@@ -29,8 +29,8 @@ h1 {
 nav ul {
     list-style: none;
     margin-left: auto;
-    padding: 10px;
     display: flex;
+    padding: 10px;
 }
 
 nav ul li {
