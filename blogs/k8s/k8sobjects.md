@@ -53,10 +53,14 @@ Secret:
         - A Secret is similar to a ConfigMap but is specifically designed for storing sensitive data like passwords, tokens, or API keys.  
         - Secrets are base64 encoded and can be used by Pods or other resources securely.  
 
-PersistentVolume (PV) and PersistentVolumeClaim (PVC):    
-        - A PersistentVolume is a piece of networked storage in the cluster that can be used by Pods.  
-        - A PersistentVolumeClaim is a request for a specific amount and type of storage.  
-        - PVCs bind to PVs and provide a way for Pods to request and use persistent storage.  
+
+Volumes:   
+        Volumes are objects whose purpose is to provide storage to pods. There are two basic types of volumes in Kubernetes.  
+        Ephemeral volumes persist only during the lifetime of the pod they are tied to.  
+        PersistentVolume (PV) and PersistentVolumeClaim (PVC):     
+                - A PersistentVolume is a piece of networked storage in the cluster that can be used by Pods.  
+                - A PersistentVolumeClaim is a request for a specific amount and type of storage.  
+                - PVCs bind to PVs and provide a way for Pods to request and use persistent storage.  
 
 StorageClass:  
         - A StorageClass defines different storage configurations (e.g., type, access mode) that can be used to dynamically provision PersistentVolumes.  
