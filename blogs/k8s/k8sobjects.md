@@ -19,7 +19,7 @@ ReplicaSet:
         - A ReplicaSet ensures that a specified number of Pod replicas are running at all times.  
         - It is responsible for maintaining the desired state by creating or deleting Pods as necessary.  
         - ReplicaSets can be used for scaling and load balancing your application.  
-
+        
 Deployment:  
         - A Deployment provides declarative updates for Pods and ReplicaSets.  
         - It allows you to create and manage ReplicaSets, making it easier to perform rolling updates and rollbacks.  
