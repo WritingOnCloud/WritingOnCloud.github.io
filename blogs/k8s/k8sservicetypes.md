@@ -127,5 +127,8 @@ spec:
 kubectl get ingress my-ingress
 kubectl describe ingress my-ingress
 ```
+**Note**:  
+Replace the placeholder values like **my-clusterip-service, my-app, my-nodeport-service, etc**., with your desired names and configurations.
+Remember to apply the YAML files using the command kubectl apply -f <filename>.yaml before using the kubectl get and kubectl describe commands to view their details.
 
 Kubernetes services are an essential component for building scalable and resilient applications. Understanding the different types of services available and their use cases can greatly enhance your ability to design and deploy applications on Kubernetes effectively. Whether you require internal communication, external access, load balancing, or advanced routing capabilities, Kubernetes offers a range of service types to meet your application's needs. By leveraging these services wisely, you can harness the full potential of Kubernetes and build robust, scalable, and highly available applications.
