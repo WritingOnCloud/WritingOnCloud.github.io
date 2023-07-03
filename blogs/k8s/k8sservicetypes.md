@@ -5,8 +5,45 @@ In the world of container orchestration, Kubernetes has emerged as the de facto 
 ## ClusterIP Service    
 The ClusterIP service is the default type in Kubernetes. It provides an internal IP address to expose a set of pods within the cluster. This service type enables communication between different pods within the same cluster, making it ideal for internal microservices communication. ClusterIP services are not accessible from outside the cluster, making them suitable for applications that don't require external access.  
 
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-clusterip-service
+spec:
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+```
+```  
+kubectl get service my-clusterip-service
+kubectl describe service my-clusterip-service
+```
+
 ## NodePort Service    
 NodePort services expose pods on a specific port across all nodes in the cluster. They allow external access to the service by mapping a high-numbered port on the cluster nodes to the exposed port of the service. NodePort services are commonly used for applications that need direct access from outside the cluster, but they may not be suitable for production environments due to security concerns.  
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nodeport-service
+spec:
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: NodePort
+```
+```
+kubectl get service my-nodeport-service
+kubectl describe service my-nodeport-service
+```
+
 
 ## LoadBalancer Service  
 LoadBalancer services are designed to distribute incoming network traffic across multiple pods in a cluster. They automatically provision an external load balancer (such as a cloud provider's load balancer) to expose the service externally. LoadBalancer services are ideal for applications that require both external accessibility and load distribution, making them well-suited for production environments.  
