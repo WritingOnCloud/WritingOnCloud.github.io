@@ -5,7 +5,7 @@ In the world of container orchestration, Kubernetes has emerged as the de facto 
 ## ClusterIP Service    
 The ClusterIP service is the default type in Kubernetes. It provides an internal IP address to expose a set of pods within the cluster. This service type enables communication between different pods within the same cluster, making it ideal for internal microservices communication. ClusterIP services are not accessible from outside the cluster, making them suitable for applications that don't require external access.  
 
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -25,7 +25,7 @@ kubectl describe service my-clusterip-service
 
 ## NodePort Service    
 NodePort services expose pods on a specific port across all nodes in the cluster. They allow external access to the service by mapping a high-numbered port on the cluster nodes to the exposed port of the service. NodePort services are commonly used for applications that need direct access from outside the cluster, but they may not be suitable for production environments due to security concerns.  
-```
+```yaml 
 apiVersion: v1
 kind: Service
 metadata:
