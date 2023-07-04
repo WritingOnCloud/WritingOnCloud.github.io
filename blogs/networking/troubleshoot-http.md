@@ -86,8 +86,8 @@ Few more Linux commands that can be useful for troubleshooting HTTP issues:
 7. journalctl:
    - `journalctl -u <service>`: Displays the log entries for a specific HTTP-related service using the systemd journal, providing insights into service activity and errors.
 
-
-## Wireshark HTTP Filters:
+# Wireshark Filters 
+## HTTP Filters :
 
 http: Filters all HTTP packets.  
 http.host: Filters packets based on the host header value.  
