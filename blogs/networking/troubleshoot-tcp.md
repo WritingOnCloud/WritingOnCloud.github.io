@@ -62,6 +62,68 @@ TCP provides reliable, ordered, and error-checked delivery of data between two e
 8. tcpflow:
    - `tcpflow -c -i <interface> port <port>`: Captures and saves TCP sessions to separate files for further analysis.
 
-# Wireshark Filters for TCP
+# Wireshark Filters for TCP  
 
+1. Filter by TCP Traffic:
+   - `tcp`: Displays all TCP packets.
+   - `tcp.port == <port>`: Filters TCP packets based on the specified port number.
+   - `tcp.flags.syn == 1`: Filters TCP packets with the SYN flag set, indicating the start of a connection.
+   - `tcp.flags.ack == 1`: Filters TCP packets with the ACK flag set, indicating acknowledgment of a segment.
 
+2. Filter by TCP Flow:
+   - `tcp.stream eq <stream_id>`: Filters packets belonging to the specified TCP stream.
+   - `tcp.stream eq <stream_id> && ip.addr == <ip_address>`: Filters packets for a specific TCP stream and IP address.
+
+3. Filter by TCP Sequence and Acknowledgment Numbers:
+   - `tcp.seq == <sequence_number>`: Filters packets with a specific TCP sequence number.
+   - `tcp.ack == <acknowledgment_number>`: Filters packets with a specific TCP acknowledgment number.
+
+4. Filter by TCP Flags:
+   - `tcp.flags.fin == 1`: Filters TCP packets with the FIN flag set, indicating the end of a connection.
+   - `tcp.flags.rst == 1`: Filters TCP packets with the RST flag set, indicating the reset of a connection.
+   - `tcp.flags.push == 1`: Filters TCP packets with the PSH (push) flag set, indicating urgent data.
+
+5. Filter by TCP Options:
+   - `tcp.options.mss == <mss_value>`: Filters TCP packets with a specific Maximum Segment Size (MSS) value.
+   - `tcp.options.timestamp`: Filters TCP packets with the Timestamp option.
+
+6. Filter by TCP Window Size:
+   - `tcp.window_size == <window_size>`: Filters TCP packets with a specific window size value.
+
+7. Filter by TCP Retransmissions:
+   - `tcp.analysis.retransmission`: Filters TCP packets identified as retransmissions.
+
+8. Filter by TCP Window Scaling:
+   - `tcp.options.ws`: Filters TCP packets with the Window Scaling option.
+
+9. Filter by TCP Selective Acknowledgment (SACK):
+   - `tcp.options.sack`: Filters TCP packets with the Selective Acknowledgment (SACK) option.
+
+10. Filter by TCP Urgent Data:
+    - `tcp.flags.urg == 1`: Filters TCP packets with the URG (urgent) flag set, indicating the presence of urgent data.
+
+11. Filter by TCP Keep-Alive:
+    - `tcp.analysis.keep_alive`: Filters TCP packets identified as keep-alive packets.
+
+12. Filter by TCP Window Update:
+    - `tcp.flags.window_update == 1`: Filters TCP packets with the Window Update flag set.
+
+13. Filter by TCP Dupacks:
+    - `tcp.analysis.duplicate_ack`: Filters TCP packets identified as duplicate acknowledgments (Dupacks).
+
+14. Filter by TCP Zero Window:
+    - `tcp.flags.zero_window == 1`: Filters TCP packets with the Zero Window flag set, indicating a zero window size.
+
+15. Filter by TCP Fast Retransmission:
+    - `tcp.analysis.fast_retransmission`: Filters TCP packets identified as fast retransmissions.
+
+16. Filter by TCP Out-of-Order Packets:
+    - `tcp.analysis.out_of_order`: Filters TCP packets identified as out-of-order packets.
+
+17. Filter by TCP Window Full:
+    - `tcp.analysis.window_full`: Filters TCP packets identified as window full.
+
+18. Filter by TCP Keep-Alive Acknowledgment:
+    - `tcp.analysis.keep_alive_ack`: Filters TCP packets identified as keep-alive acknowledgment packets.
+
+We can apply them based on the specific aspects of TCP behavior you want to examine, such as window scaling, selective acknowledgment, urgent data, keep-alive, window updates, duplicate acknowledgments, zero window conditions, fast retransmissions, out-of-order packets, or window full indications.  
