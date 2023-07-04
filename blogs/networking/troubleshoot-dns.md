@@ -97,7 +97,7 @@ Few more Linux commands that can be useful for troubleshooting DNS issues:
 These additional commands provide more options for diagnosing and troubleshooting DNS issues. **They can help you gather more detailed information, check DNS configurations, analyze DNS traffic, and verify network connectivity**.
 
 # Wireshark Filters for DNS
-## DNS Filters:  
+**DNS Filters:**  
 
 dns: Filters DNS packets.  
 dns.qry.name: Filters packets based on the queried domain name.  
@@ -106,65 +106,65 @@ dns.flags.response: Filters packets based on DNS response packets.
 dns.flags.response == 0: Filters packets based on DNS query packets.  
 dns.flags.response == 1: Filters packets based on DNS response packets.  
 
-## DNS Record Type Filters:  
+**DNS Record Type Filters:**  
 
 dns.qry.type: Filters packets based on the DNS query type (e.g., A, AAAA, NS, MX, CNAME).  
 dns.resp.type: Filters packets based on the DNS response type.  
 
-## DNS Response Code Filters:  
+**DNS Response Code Filters:**   
 
 dns.flags.rcode: Filters packets based on the DNS response code.  
 dns.flags.rcode == <code>: Filters packets based on a specific DNS response code (e.g., 0 for No Error, 3 for Name Error).  
 
-## DNS Time to Live (TTL) Filters:  
+**DNS Time to Live (TTL) Filters:**  
 
 dns.a.ttl: Filters packets based on the TTL value of DNS A records.  
 dns.cname.ttl: Filters packets based on the TTL value of DNS CNAME records.  
 
-## DNS Flags Filters:  
+**DNS Flags Filters:**  
 
 dns.flags: Filters packets based on DNS flags.  
 dns.flags.response_ip: Filters packets based on the DNS response IP address.  
 
-## DNS EDNS Options Filters:  
+**DNS EDNS Options Filters:**  
 
 dns.opt: Filters packets based on DNS EDNS (Extension Mechanisms for DNS) options.  
 
-## DNS Response Size Filters:  
+**DNS Response Size Filters:**  
 
 dns.len: Filters packets based on the length of the DNS response.  
 
-## DNS Server Filters:  
+**DNS Server Filters:**  
 
 dns.flags.response_ip == <server_ip>: Filters packets based on the DNS response IP address of a specific DNS server.  
 
-## DNS Response Time Filters:  
+**DNS Response Time Filters:**  
 
 dns.time: Filters packets based on the time taken for DNS queries or responses.  
 dns.time >= <time_in_seconds>: Filters packets based on a specific DNS response time threshold.  
 
-## DNS Authoritative Answer Filters:  
+**DNS Authoritative Answer Filters:**  
 
 dns.flags.auth: Filters packets based on whether the DNS response is authoritative.  
 
-## DNS Response Size Filters:  
+**DNS Response Size Filters:**  
 
 dns.len: Filters packets based on the length of the DNS response.  
 
-## DNS Name Server Filters:  
+**DNS Name Server Filters:**  
 
 dns.ns: Filters packets based on the name server specified in DNS responses.  
 
-## DNS Transaction ID Filters:  
+**DNS Transaction ID Filters:**  
 
 dns.id: Filters packets based on the DNS transaction ID.  
 
-## DNS Response TTL Filters:  
+**DNS Response TTL Filters:**  
 
 dns.a.ttl: Filters packets based on the TTL (Time to Live) value of DNS A records.  
 dns.cname.ttl: Filters packets based on the TTL value of DNS CNAME records.  
 dns.soa.ttl: Filters packets based on the TTL value of DNS SOA (Start of Authority) records.  
 
-## DNS Zone Transfer Filters:  
+**DNS Zone Transfer Filters:**  
 
 dns.flags.response == 0 && dns.flags.opcode == 5: Filters packets for DNS zone transfer requests.  
